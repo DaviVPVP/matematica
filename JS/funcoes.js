@@ -124,7 +124,7 @@ function bhaskara(){
     "\nDelta: " + delta + "\n\nX1: " + x1 + "\nX2: " + x2;
 }//fim do método
 
-function parImpar() {
+function parImpar(){
     var num = document.getElementById("tpNum").value;
     num = parseFloat(num);
     
@@ -136,7 +136,7 @@ function parImpar() {
     }
 }
 
-function positivoNegativo() {
+function positivoNegativo(){
     var num = document.getElementById("tpNum").value;
     num = parseFloat(document.getElementById("tpNum").value);
 
@@ -148,6 +148,125 @@ function positivoNegativo() {
     } else {
         document.getElementById("resultado").innerHTML = "Zero!";
     }
+}//fim de método
+
+function ex1(){
+    var res = "";
+
+    for (var i = 1; i <= 10; i++) {
+        res += i + " ";
+    }
+
+    document.getElementById("resultado").innerHTML = res;
+}//fim de método
+
+function ex2(){
+    var res = "";
+
+    for (var i = 2; i <= 20; i += 2) {
+        res += i + " ";
+    }
+
+    document.getElementById("resultado").innerHTML = res;
+}//fim de método
+
+function ex3(){
+    var soma = 0;
+
+    for (var i = 1; i <= 100; i++) {
+        soma += i;
+    }
+
+    document.getElementById("resultado").innerHTML = + soma;
+}//fim de método
+
+function ex4(){
+    var res = "";
+
+    for (var i = 5; i <= 50; i += 5) {
+        res += i + " ";
+    }
+
+    document.getElementById("resultado").innerHTML = res;
+}//fim de método
+
+function ex5(){
+    var num1 = parseInt(document.getElementById("tpNum").value);
+    var res = "";
+    for (var i = 1; i <= num1; i++) {
+        res += i + " ";
+    }
+    document.getElementById("resultado").innerHTML = res;
+}//fim de método
+
+function ex6(){
+    var num1 = parseInt(document.getElementById("tpNum").value);
+    var soma = 0;
+
+    for (var i = 1; i <= num1; i++) {
+        soma += i;
+    }
+
+    document.getElementById("resultado").innerHTML = "A dos números entre 1 e " + num1 + " é: " + soma;
+}//fim de método
+
+function ex7() {
+    var num1 = parseInt(document.getElementById("tpNum").value);
+    var res = "";
+    for (var i = 2; i <= num1; i++) {
+        var primo = true;
+        for (var j = 2; j < i; j++) {
+            if (i % j === 0) {
+                primo = false;
+                break;
+            }
+        }
+        if (primo) {
+            res += i + " ";
+        }
+    }
+    document.getElementById("resultado").innerHTML = "Números primos de 1 a " + num1 + ": " + res;
+}//fim de método
+
+function ex8(){
+    var num1 = parseInt(document.getElementById("tpNum").value);
+    var primo = true;
+    if (num1 <= 1) {
+        primo = false;
+    } else {
+        for (var i = 2; i < num1; i++) {
+            if (num1 % i === 0) {
+                primo = false;
+                break;
+            }
+        }
+    }
+    var resultadoElemento = document.getElementById("resultado");
+    if (primo) {
+        resultadoElemento.textContent = "Primo";
+    } else {
+        resultadoElemento.textContent = "Não primo";
+    }
+}//fim de método
+
+function ex9(){
+    var num1 = parseInt(document.getElementById("tpNum").value);
+    var fatorial = 1;
+    if (num1 < 0) {
+        document.getElementById("resultado").innerHTML = "Informe um valor maior positivo!";
+    } else {
+        for (var i = 1; i <= num1; i++) {
+            fatorial *= i;
+        }
+        document.getElementById("resultado").innerHTML = fatorial;
+    }
 }
+
+
+
+
+
+
+
 
 
